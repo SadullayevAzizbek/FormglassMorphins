@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background:linear-gradient(120deg,#0a2ea5,#cf94cf);
+}
+.box{
+  position: relative;
+  height: 500px;
+  width: 450px;
+  /* transform: scale(1.2); */
+}
+.box::before{
+  content: "";
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  background: linear-gradient(#fc63fc,#f02020);
+  border-radius: 50%;
+  transform: translate(-150px);
+  z-index: -1;
+}
+.box::after{
+  content: "";
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  background: linear-gradient(#11ec7f,#134cc9,#f02020);
+  border-radius: 50%;
+  transform: translate(300px,200px);
+  z-index: -1;
+}
+.form{
+  position: absolute;
+  background-color: rgba(255,255,255,.2);
+  overflow: hidden;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  justify-content: center;
+  box-shadow: 2px 4px 8px rgba(0,0,0,.3);
+  align-items: center;
+}
+
+.form::before{
+  content: "";
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  background-color: rgba(255,255,255,.2);
+  box-shadow: 10px 0 0 #fff ,inset 0 0  20px #333;
+  border-radius: 50%;
+  transform: translate(-140px) rotate(20deg);
+}
+.form h2{
+  text-align: center;
+  color: #fff;
+  letter-spacing: 8px;
+  transform: scale(1.2);
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.inputbx{
+  position: relative;
+  width: 410px;
+  margin-top: 35px;
+}
+.inputbx input{
+  position: relative;
+  padding: 20px 10px 10px;
+  width: 80%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #fff;
+}
+.inputbx span{
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+.inputbx input:valid ~ span,
+.inputbx input:focus ~ span{
+  color: #fff;
+  transform: translate(-10px, -34px) ;
+  font-size: 12px;
+}
+.sign-in{
+  margin-top: 2rem;
+  background-color: #0a2ea5;
+  outline: none;
+  border: none;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  transform: scale(1.2);
+  border-radius: .4rem;
+}
